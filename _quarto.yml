@@ -1,0 +1,23 @@
+project:
+  type: website
+
+website:
+  title: "eLucidate science"
+  navbar:
+    background: "#111418"
+    right:
+      - about.qmd
+      - icon: github
+        href: https://github.com/metahag
+      - icon: instagram
+        href: https://www.instagram.com/znanstvena_revolucija
+format:
+  html:
+    fontcolor: "#F6F3F5" 
+    backgroundcolor: "#648844"
+    linkcolor: "#111418"
+    mainfont: "Gill Sans"
+    monobackgroundcolor: "#094918"
+
+editor: source
+

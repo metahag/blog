@@ -1,0 +1,33 @@
+---
+title: "About"
+image: profile.jpg
+about:
+  template: jolla
+  links:
+    - icon: twitter
+      text: Twitter
+      href: https://twitter.com/Luce10101
+    - icon: linkedin
+      text: LinkedIn
+      href: https://www.linkedin.com/lucija-batinović-4a43151a4
+    - icon: github
+      text: Github
+      href: https://github.com/metahag
+editor: source
+---
+
+*eLucidate Science* is a collection of guides and tips for (under)graduate students and others interested in learning about open and reproducible science. Articles are based on my experience as a PhD student and reproducibility reviewer for [Meta-Psychology](https://open.lnu.se/index.php/metapsychology/).
+
+## Education
+
+Linköping University \| Linköping, Sweden PhD in Disability Research \| Jan 2022 - present
+
+Linnaeus University \| Växjö, Sweden M.Sc. in Work and Organizational Psychology \| 2019 - 2021
+
+University of Zadar \| Zadar, Croatia Bachelor of Psychology \| 2016 - 2019
+
+## Experience
+
+Editorial Assistant and Reproducibility Coordinator at [Meta-Psychology](https://open.lnu.se/index.php/metapsychology/) \| Linnaeus University \| 2021 - present
+
+Research Assistant \| Linnaeus University \| 2021 - 2022

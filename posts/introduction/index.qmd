@@ -1,0 +1,19 @@
+---
+title: "Introduction"
+description: "What can you find on this site?"
+author: "Lucija Batinović"
+date: "2024-06-22"
+categories:
+  - general
+editor: source
+---
+
+True to my procrastinating personality, I have reached a point in my PhD journey where I boldly decide to start blogging about the interesting (to me at least) topics I am familiar with. As I despise writing with all my being, it is only natural that I take writing as my next hobby.  
+
+If you happen to stumble upon this site, consider this blog as my personal rant space and activate critical thinking when reading - I might be speaking nonsense. In fact, if you notice nonsense, please contact me so I can correct it.
+
+My background is available and up-to-date (wishful thinking lmao) in the About section, and my focus here will be mostly on open science, reproducibility, (complaining about) research quality in special education, and my love for R.
+
+I will be sharing thoughts on new research, short guides related to reproducibility and open science practices, and shameless plugs. While I plan to write mostly in English, some posts will be in Croatian, or both. 
+
+Coming to the end of this introduction post, I am actually excited to start this journey, so who knows, maybe there's hope for us after all. Hope you enjoy, pozdrav!
