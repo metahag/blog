@@ -1,1 +1,30 @@
-$navbar-bg: #648844;
+/*-- scss:defaults --*/
+$primary:  #BBDDC5 !default;
+$font-family-base:  SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default;
+$body-color: #4F9D69 !default;
+$headings-font-family:  "Courier New", Roboto !default;
+$navbar-bg: #BBDDC5;
+$link-color: #648844;
+
+/*-- scss:rules --*/
+header#quarto-header.headroom.fixed-top.headroom--top.headroom--not-bottom {
+  font-family: "Courier New", Roboto, $headings-font-family;
+  font-size: $font-size-base * 1.2;
+}
+
+#title-block-header {
+  font-family: "Courier New", Roboto, $headings-font-family;
+  font-size: $font-size-base * 1.2;
+}
+
+body {
+  background-color: $primary;
+  color: $body-color;
+}
+/*-- 
+    fontcolor: "#F6F3F5" 
+    backgroundcolor: "#648844"
+    linkcolor: "#111418"
+    mainfont: "Gill Sans"
+    monobackgroundcolor: "#094918"
+--*/

@@ -13,11 +13,8 @@ website:
         href: https://www.instagram.com/znanstvena_revolucija
 format:
   html:
-    fontcolor: "#F6F3F5" 
-    backgroundcolor: "#648844"
-    linkcolor: "#111418"
-    mainfont: "Gill Sans"
-    monobackgroundcolor: "#094918"
+    theme: styles.scss
+
 
 editor: source
 

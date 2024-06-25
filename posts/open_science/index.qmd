@@ -1,0 +1,14 @@
+---
+title: "Open Science (in Disability Research)"
+description: "An overview of necessary steps to ensure a study follows open science principles"
+author: "Lucija Batinović"
+date: "2024-06-23"
+categories:
+  - open science
+  - reproducibility
+editor: source
+draft: true
+---
+
+## What are the principles?
+For simplicity (or lack of better categorization) let's follow the [OSF](https://osf.io/tvyxz/wiki/2.%20Awarding%20Badges/) open science categories: Open Data, Open Materials, Open Code, and Open Access. I added the last one, OSF doesn't cover this in the linked site. 
