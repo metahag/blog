@@ -8,7 +8,7 @@
 
 <meta name="author" content="Lucija Batinović">
 <meta name="dcterms.date" content="2024-07-10">
-<meta name="description" content="First section of the Open Science Principles series">
+<meta name="description" content="Tips and resources for FAIRly sharing your data">
 
 <title>eLucidate science - Open Data (in Disability Research)</title>
 <style>
@@ -171,7 +171,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
       <h1 class="title">Open Data (in Disability Research)</h1>
                   <div>
         <div class="description">
-          First section of the Open Science Principles series
+          Tips and resources for FAIRly sharing your data
         </div>
       </div>
                           <div class="quarto-categories">
@@ -270,8 +270,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>Presumably, raw data would only be data that is in the <a href="https://docs.google.com/document/d/1u8o5jnWk0Iqp_J06PTu5NjBfVsdoPbBhstht6W0fFp0/edit#heading=h.1m6sa5bs9j0e">source format</a>, i.e., a video-recording, html file downloaded from SurveyMonkey, filled out paper survey, etc., which would make a tabular form of the variables collected with various sources processed to some degree. For the purposes of this blog, raw data will be considered the first iteration of the tabular form. For example, if you collected your data through a paper survey, we would consider raw data to be an Excel file containing answers from all participants that someone transferred from paper to Excel.</p>
 <p>Note that Excel is also a proprietary software, and saving your data should be done in open source formats (e.g., files with extension like .csv, .txt, .tsv), which can be opened without paying for a software licence. However, R and Python can read Excel files even if you don’t have access to Microsoft Excel. Still, it is good practice to save your data in a machine-readable, open format. Some will argue however, that saving Excel files as a .csv file might lead to data loss and errors. Unless you have done some kind of preprocessing in Excel, this should not be overly concerning, but for safety, keep an Excel copy saved as well.</p>
 <p>Raw data will most likely contain identifiers, and should rarely be openly deposited due to possible ethical and privacy violations.</p>
-<section id="anonymize-the-dataset-by-removing-identifiying-columns" class="level4" data-number="1.0.1">
-<h4 data-number="1.0.1" class="anchored" data-anchor-id="anonymize-the-dataset-by-removing-identifiying-columns"><span class="header-section-number">1.0.1</span> Anonymize the dataset by removing identifiying columns</h4>
+<section id="anonymize-the-dataset-by-removing-identifiying-columns" class="level3" data-number="1.1">
+<h3 data-number="1.1" class="anchored" data-anchor-id="anonymize-the-dataset-by-removing-identifiying-columns"><span class="header-section-number">1.1</span> Anonymize the dataset by removing identifiying columns</h3>
 <div class="panel-tabset">
 <ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-2-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-1" role="tab" aria-controls="tabset-2-1" aria-selected="true">R</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-2-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-2" role="tab" aria-controls="tabset-2-2" aria-selected="false">Python</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-2-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-3" role="tab" aria-controls="tabset-2-3" aria-selected="false">Jamovi</a></li></ul>
 <div class="tab-content">
@@ -321,8 +321,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </div>
 </div>
 </section>
-<section id="anonymize-data-by-creating-synthetic-equivalents" class="level4" data-number="1.0.2">
-<h4 data-number="1.0.2" class="anchored" data-anchor-id="anonymize-data-by-creating-synthetic-equivalents"><span class="header-section-number">1.0.2</span> Anonymize data by creating synthetic equivalents</h4>
+<section id="anonymize-data-by-creating-synthetic-equivalents" class="level3" data-number="1.2">
+<h3 data-number="1.2" class="anchored" data-anchor-id="anonymize-data-by-creating-synthetic-equivalents"><span class="header-section-number">1.2</span> Anonymize data by creating synthetic equivalents</h3>
 <p>Sensitive data, particularly when it pertains to populations with low incidence disabilities may still be identifiable, even when we drop demographic information or identifying descriptors. To be able to share the code and make it reproducible, one way to share the data is to create synthetic datasets based on the properties of the original one.</p>
 <p>I will show one example in R and Python, with the <a href="https://cran.r-project.org/web/packages/synthpop/synthpop.pdf"><em>synthpop</em></a> R package, and the <a href="https://docs.sdv.dev/sdv"><em>sdv</em></a> Python package, but there are multiple packages that could fit your needs in both languages. These packages allow you to recreate your dataset and keep original properties (i.e., type of data for each variable) and relations between them (e.g., mean or correlation values) as much as possible.</p>
 <p>Synthetic data fidelity depends on the size and quality of the original data, but it can at least serve as a dataset that allows reproducing the code you used to conduct analyses. Each package (library) also provides functions that help you estimate how well the synthetic data corresponds to the original.</p>

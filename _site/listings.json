@@ -2,6 +2,7 @@
   {
     "listing": "/index.html",
     "items": [
+      "/posts/open_science/index.html",
       "/posts/introduction/index.html"
     ]
   }
