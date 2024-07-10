@@ -2,6 +2,7 @@
 title: "eLucidate science"
 listing:
   contents: posts
+  feed: true
   sort: "date desc"
   type: default
   categories: true

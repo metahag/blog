@@ -2,6 +2,10 @@ project:
   type: website
 
 website:
+  google-analytics: 
+    tracking-id: "G-EGKBDV26WE"
+    anonymize-ip: true
+  cookie-consent: true
   title: "eLucidate science"
   navbar:
     background: "#111418"
