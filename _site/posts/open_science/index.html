@@ -7,10 +7,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Lucija Batinović">
-<meta name="dcterms.date" content="2024-06-23">
-<meta name="description" content="An overview of necessary steps to ensure a study follows open science principles">
+<meta name="dcterms.date" content="2024-07-10">
+<meta name="description" content="First section of the Open Science Principles series">
 
-<title>eLucidate science - Open Science (in Disability Research)</title>
+<title>eLucidate science - Open Data (in Disability Research)</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -23,6 +23,69 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1.6em;
   vertical-align: middle;
 }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { color: #008000; } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { color: #008000; font-weight: bold; } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
 </style>
 
 
@@ -38,10 +101,10 @@ ul.task-list li input[type="checkbox"] {
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="dark">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -105,10 +168,10 @@ ul.task-list li input[type="checkbox"] {
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
-      <h1 class="title">Open Science (in Disability Research)</h1>
+      <h1 class="title">Open Data (in Disability Research)</h1>
                   <div>
         <div class="description">
-          An overview of necessary steps to ensure a study follows open science principles
+          First section of the Open Science Principles series
         </div>
       </div>
                           <div class="quarto-categories">
@@ -131,7 +194,7 @@ ul.task-list li input[type="checkbox"] {
       <div>
       <div class="quarto-title-meta-heading">Published</div>
       <div class="quarto-title-meta-contents">
-        <p class="date">June 23, 2024</p>
+        <p class="date">July 10, 2024</p>
       </div>
     </div>
     
@@ -149,9 +212,259 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<section id="what-are-the-principles" class="level2">
-<h2 class="anchored" data-anchor-id="what-are-the-principles">What are the principles?</h2>
-<p>For simplicity (or lack of better categorization) let’s follow the <a href="https://osf.io/tvyxz/wiki/2.%20Awarding%20Badges/">OSF</a> open science categories: Open Data, Open Materials, Open Code, and Open Access. I added the last one, OSF doesn’t cover this in the linked site.</p>
+<p>Why should you share your data? Because sharing is caring. It is 2024, we are in an environmental crisis, and collecting data and keeping it to yourself should be a crime against humanity. Now that you’re guilted into it, it is only fair I help you change.</p>
+<p>Most common excuse for keeping data private is privacy concerns, which is a legitimate reason and a problem that is yet to be fully solved. This post offers some tips on how to share data in a safer way.</p>
+<p>Sharing data today is becoming a beneficial act to the data curators (i.e., you who are creating and maintaining the datasets) as well, not only to everyone else who can reuse that data, because properly sharing datasets allows others to cite your work. Properly collected, curated and shared data is becoming as valuable as publishing journal articles (maybe I’m exaggerating, but this is certainly how things should be!).</p>
+<p>Let’s start with defining open data, so there can’t be any arguments on semantics. I will refer to the <a href="https://www.go-fair.org/fair-principles/">FAIR</a> principles, although I would argue that “open data” means different things to different entities. FAIR stands for Findable, Accessible, Interoperable and Reusable data.</p>
+<p>I would try to translate their principles as open (i.e., FAIR) data being: a unique file, containing only variables and values (regardless of the file type, e.g., .txt, .json, etc.) that can be used as is, or wrangled with available analytical tools. Notice that with the current development of LLMs, this will start encompassing a much larger number of file types.</p>
+<p>For example, you can probably take a poorly described dataset, formatted in a complicated, nested table, and saved as a PDF, import it to chatGPT and it will export a usable Excel sheet with that data. I would argue this does not qualify that PDF as FAIR data, and I would for these purposes equate AI power to manual labor, and if that is necessary, your (open) data is not FAIR.</p>
+<p>There are millions of nuances here probably, and most outliers will probably be pointless to cover because it is safe to assume most data in social sciences is simply tabular. I will only focus on that type of data in this post, and might do a separate post for neuro/image-based data, although the basic principles stay the same.</p>
+<p>We will go through each step using a simulated dataset. Wherever possible, steps will be shown in R, Python, and Jamovi as a GUI alternative. You can of course use SPSS, MATLAB or other proprietary softwares, but if you don’t plan to use open source alternatives, you’re on your own.</p>
+<div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true">R</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false">Python</a></li></ul>
+<div class="tab-content">
+<div id="tabset-1-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-1-1-tab">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="do">## simulate a dataset with a Likert scale with 5 questions</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">2024</span>) <span class="co">#set a seed to keep the simulated numbers reproducible</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>data <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">ParticipantID =</span> <span class="fu">sample</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">1000</span>, <span class="dv">20</span>, <span class="at">replace =</span> <span class="cn">FALSE</span>),</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>                   <span class="at">questionOne =</span> <span class="fu">round</span>(<span class="fu">rnorm</span>(<span class="dv">20</span>, <span class="at">mean =</span> <span class="dv">3</span>, <span class="at">sd =</span> <span class="dv">1</span>), <span class="at">digits =</span> <span class="dv">0</span>),</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>                   <span class="at">questionTwo =</span> <span class="fu">round</span>(<span class="fu">rnorm</span>(<span class="dv">20</span>, <span class="at">mean =</span> <span class="dv">3</span>, <span class="at">sd =</span> <span class="dv">1</span>), <span class="at">digits =</span> <span class="dv">0</span>),</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>                   <span class="at">questionThree =</span> <span class="fu">round</span>(<span class="fu">rnorm</span>(<span class="dv">20</span>, <span class="at">mean =</span> <span class="dv">3</span>, <span class="at">sd =</span> <span class="dv">1</span>), <span class="at">digits =</span> <span class="dv">0</span>),</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>                   <span class="at">questionFour =</span> <span class="fu">round</span>(<span class="fu">rnorm</span>(<span class="dv">20</span>, <span class="at">mean =</span> <span class="dv">3</span>, <span class="at">sd =</span> <span class="dv">1</span>), <span class="at">digits =</span> <span class="dv">0</span>),</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>                   <span class="at">questionFive =</span> <span class="fu">round</span>(<span class="fu">rnorm</span>(<span class="dv">20</span>, <span class="at">mean =</span> <span class="dv">3</span>, <span class="at">sd =</span> <span class="dv">1</span>), <span class="at">digits =</span> <span class="dv">0</span>)</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>                   )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+<div id="tabset-1-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-2-tab">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> random</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>random.seed(<span class="dv">2024</span>) <span class="co"># set a seed for reproducibility</span></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a><span class="co"># sample random values for each column into individual lists</span></span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a><span class="co"># decide on the mean and sd of the distribution</span></span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>mu <span class="op">=</span> <span class="dv">3</span></span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>sigma <span class="op">=</span> <span class="dv">1</span></span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a><span class="co"># create a dictionary with columns</span></span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a>data <span class="op">=</span> {<span class="st">'ParticipantID'</span>: random.sample(<span class="bu">range</span>(<span class="dv">1</span>,<span class="dv">1000</span>), <span class="dv">20</span>), </span>
+<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a>        <span class="st">'questionOne'</span>: np.random.normal(mu, sigma, <span class="dv">20</span>).<span class="bu">round</span>(), </span>
+<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a>        <span class="st">'questionTwo'</span>: np.random.normal(mu, sigma, <span class="dv">20</span>).<span class="bu">round</span>(), </span>
+<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a>        <span class="st">'questionThree'</span>: np.random.normal(mu, sigma, <span class="dv">20</span>).<span class="bu">round</span>(), </span>
+<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a>        <span class="st">'questionFour'</span>: np.random.normal(mu, sigma, <span class="dv">20</span>).<span class="bu">round</span>(), </span>
+<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a>        <span class="st">'questionFive'</span>: np.random.normal(mu, sigma, <span class="dv">20</span>).<span class="bu">round</span>()} </span>
+<span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-21"><a href="#cb2-21" aria-hidden="true" tabindex="-1"></a><span class="co"># turn into a dataframe format</span></span>
+<span id="cb2-22"><a href="#cb2-22" aria-hidden="true" tabindex="-1"></a>data <span class="op">=</span> pd.DataFrame(data <span class="op">=</span> data)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+</div>
+</div>
+<section id="first-its-raw" class="level2" data-number="1">
+<h2 data-number="1" class="anchored" data-anchor-id="first-its-raw"><span class="header-section-number">1</span> First it’s raw</h2>
+<p>Whether you conduct an online survey, experiment on a local machine, pencil-paper, video-recording, etc., you will wind up with raw data in some form. Some <a href="https://www.f1000.com/resources-for-researchers/open-research/open-data/">sources</a> define raw data as “collected from the source”. It is hard to say whether we have multiple raw data stages, and when it becomes processed.</p>
+<p>Presumably, raw data would only be data that is in the <a href="https://docs.google.com/document/d/1u8o5jnWk0Iqp_J06PTu5NjBfVsdoPbBhstht6W0fFp0/edit#heading=h.1m6sa5bs9j0e">source format</a>, i.e., a video-recording, html file downloaded from SurveyMonkey, filled out paper survey, etc., which would make a tabular form of the variables collected with various sources processed to some degree. For the purposes of this blog, raw data will be considered the first iteration of the tabular form. For example, if you collected your data through a paper survey, we would consider raw data to be an Excel file containing answers from all participants that someone transferred from paper to Excel.</p>
+<p>Note that Excel is also a proprietary software, and saving your data should be done in open source formats (e.g., files with extension like .csv, .txt, .tsv), which can be opened without paying for a software licence. However, R and Python can read Excel files even if you don’t have access to Microsoft Excel. Still, it is good practice to save your data in a machine-readable, open format. Some will argue however, that saving Excel files as a .csv file might lead to data loss and errors. Unless you have done some kind of preprocessing in Excel, this should not be overly concerning, but for safety, keep an Excel copy saved as well.</p>
+<p>Raw data will most likely contain identifiers, and should rarely be openly deposited due to possible ethical and privacy violations.</p>
+<section id="anonymize-the-dataset-by-removing-identifiying-columns" class="level4" data-number="1.0.1">
+<h4 data-number="1.0.1" class="anchored" data-anchor-id="anonymize-the-dataset-by-removing-identifiying-columns"><span class="header-section-number">1.0.1</span> Anonymize the dataset by removing identifiying columns</h4>
+<div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-2-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-1" role="tab" aria-controls="tabset-2-1" aria-selected="true">R</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-2-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-2" role="tab" aria-controls="tabset-2-2" aria-selected="false">Python</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-2-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-3" role="tab" aria-controls="tabset-2-3" aria-selected="false">Jamovi</a></li></ul>
+<div class="tab-content">
+<div id="tabset-2-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-2-1-tab">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="do">## import data and drop id column in base r</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="co"># import raw data (make sure to set your directory </span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="co"># where your data is located)</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>base_data <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">"data.csv"</span>)  </span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a><span class="co"># create a new object for additional wrangling </span></span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>anon_base_data <span class="ot">&lt;-</span> base_data <span class="sc">|&gt;</span></span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">subset</span>(<span class="at">select =</span> <span class="sc">-</span>ParticipantID) </span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a><span class="do">## tidyverse version</span></span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a><span class="co"># import raw data </span></span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a>tidyv_data <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"data.csv"</span>) </span>
+<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a><span class="co"># create a new object for additional wrangling </span></span>
+<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a>anon_tidyv_data <span class="ot">&lt;-</span> tidyv_data <span class="sc">%&gt;%</span> <span class="fu">select</span>(<span class="sc">-</span>ParticipantID) </span>
+<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a><span class="co"># save the dataset as a csv file</span></span>
+<span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a><span class="co"># write_csv tidyverse alternative</span></span>
+<span id="cb3-19"><a href="#cb3-19" aria-hidden="true" tabindex="-1"></a><span class="fu">write.csv</span>(anon_base_data, <span class="st">"data.csv"</span>) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+<div id="tabset-2-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-2-2-tab">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>raw_data <span class="op">=</span> pd.read_csv(<span class="st">"data.csv"</span>)</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="co"># drop identifying columns(s)</span></span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>new_data <span class="op">=</span> raw_data.drop(columns <span class="op">=</span> [<span class="st">'ParticipantID'</span>])</span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a><span class="co"># save the dataset as a csv file</span></span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>new_data.to_csv(<span class="st">"data.csv"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+<div id="tabset-2-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-2-3-tab">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="drop_id.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Remove ID column in Jamovi</figcaption><p></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="anonymize-data-by-creating-synthetic-equivalents" class="level4" data-number="1.0.2">
+<h4 data-number="1.0.2" class="anchored" data-anchor-id="anonymize-data-by-creating-synthetic-equivalents"><span class="header-section-number">1.0.2</span> Anonymize data by creating synthetic equivalents</h4>
+<p>Sensitive data, particularly when it pertains to populations with low incidence disabilities may still be identifiable, even when we drop demographic information or identifying descriptors. To be able to share the code and make it reproducible, one way to share the data is to create synthetic datasets based on the properties of the original one.</p>
+<p>I will show one example in R and Python, with the <a href="https://cran.r-project.org/web/packages/synthpop/synthpop.pdf"><em>synthpop</em></a> R package, and the <a href="https://docs.sdv.dev/sdv"><em>sdv</em></a> Python package, but there are multiple packages that could fit your needs in both languages. These packages allow you to recreate your dataset and keep original properties (i.e., type of data for each variable) and relations between them (e.g., mean or correlation values) as much as possible.</p>
+<p>Synthetic data fidelity depends on the size and quality of the original data, but it can at least serve as a dataset that allows reproducing the code you used to conduct analyses. Each package (library) also provides functions that help you estimate how well the synthetic data corresponds to the original.</p>
+<div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-3-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-3-1" role="tab" aria-controls="tabset-3-1" aria-selected="true">R</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-3-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-3-2" role="tab" aria-controls="tabset-3-2" aria-selected="false">Python</a></li></ul>
+<div class="tab-content">
+<div id="tabset-3-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-3-1-tab">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(synthpop)</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>syn_data <span class="ot">&lt;-</span> <span class="fu">syn</span>(anon_base_data,</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>                <span class="at">method =</span> <span class="st">"parametric"</span>, </span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>                <span class="at">seed =</span> <span class="dv">123</span>)</span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a><span class="co"># compare the similarity between the synthetic and original data</span></span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a><span class="fu">compare</span>(syn_data<span class="sc">$</span>syn, anon_base_data) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+<div id="tabset-3-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-3-2-tab">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> sdv</span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sdv.metadata <span class="im">import</span> SingleTableMetadata</span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sdv.single_table <span class="im">import</span> GaussianCopulaSynthesizer</span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sdv.evaluation.single_table <span class="im">import</span> run_diagnostic, evaluate_quality</span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sdv.evaluation.single_table <span class="im">import</span> get_column_plot</span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> random</span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a>random.seed(<span class="dv">2024</span>)</span>
+<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a><span class="co"># create the metadata of the dataset</span></span>
+<span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a>metadata <span class="op">=</span> SingleTableMetadata()</span>
+<span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a>metadata.detect_from_dataframe(new_data)</span>
+<span id="cb6-12"><a href="#cb6-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-13"><a href="#cb6-13" aria-hidden="true" tabindex="-1"></a><span class="co"># select the type of sampling</span></span>
+<span id="cb6-14"><a href="#cb6-14" aria-hidden="true" tabindex="-1"></a>synthesizer <span class="op">=</span> GaussianCopulaSynthesizer(metadata)</span>
+<span id="cb6-15"><a href="#cb6-15" aria-hidden="true" tabindex="-1"></a><span class="co"># create the synthetic data</span></span>
+<span id="cb6-16"><a href="#cb6-16" aria-hidden="true" tabindex="-1"></a>synthesizer.fit(new_data)</span>
+<span id="cb6-17"><a href="#cb6-17" aria-hidden="true" tabindex="-1"></a>synthetic_data <span class="op">=</span> synthesizer.sample(num_rows<span class="op">=</span><span class="dv">20</span>)</span>
+<span id="cb6-18"><a href="#cb6-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-19"><a href="#cb6-19" aria-hidden="true" tabindex="-1"></a><span class="co"># compare the similarity between the synthetic and original data</span></span>
+<span id="cb6-20"><a href="#cb6-20" aria-hidden="true" tabindex="-1"></a><span class="co"># basic validity checks</span></span>
+<span id="cb6-21"><a href="#cb6-21" aria-hidden="true" tabindex="-1"></a>validity <span class="op">=</span> run_diagnostic(new_data, synthetic_data, metadata)</span>
+<span id="cb6-22"><a href="#cb6-22" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-23"><a href="#cb6-23" aria-hidden="true" tabindex="-1"></a><span class="co"># statistical similarity</span></span>
+<span id="cb6-24"><a href="#cb6-24" aria-hidden="true" tabindex="-1"></a>similarity <span class="op">=</span> evaluate_quality(new_data, synthetic_data, metadata)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Synthetic datasets have been getting attention for some time now in healthcare research, so you can read up more about them <a href="https://doi.org/10.1038/s41746-023-00927-3">here</a> and <a href="https://medicine.wustl.edu/news/synthetic-data-mimics-real-health-care-data-without-patient-privacy-concerns/">here</a>, and disability research (and social sciences generally) can absolutely benefit from them as well.</p>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="prepare-metadatacodebook" class="level2" data-number="2">
+<h2 data-number="2" class="anchored" data-anchor-id="prepare-metadatacodebook"><span class="header-section-number">2</span> Prepare metadata/codebook</h2>
+<p>FAIR data reuqires you to provide “data about your data” (i.e., metadata) which allows users to understand what the dataset contains in terms of measured variables, name meaning, permitted and forbidden values, etc.</p>
+<p>For example, you might have a dataset containing a hundred variables you collected from a large battery of cognitive tests. Providing that dataset to others is close to useless if the users do not know what each variable was measuring, what was the possible range of values for each variable and what was the intended data type (e.g., integer).</p>
+<p>Once again, there is no clear consensus on naming and defining metadata, so I will use it interchangeably with codebook here, as some fields call files containing that information “codebooks”. <a href="#sec-resources">Section&nbsp;4</a> at the end provides links to guides that can help you create good metadata files.</p>
+<p>Once your data is deidentified, you can proceed to clean it and wrangle however you need it for your analyses. Once you have both the deidentified raw data and the clean (final) dataset, you can prepare for sharing those files.</p>
+<p>To provide FAIR data, you now have the data saved as a .csv file. Great! Now we need a codebook and quality metadata for the dataset. A codebook is a file accompanying the dataset which explains each variable, e.g., data type, range of values, names, descriptions, etc. You can write this by yourself, but R provides a package that creates a detailed codebook for you. <a href="https://cran.r-project.org/web/packages/codebook/codebook.pdf"><em>codebook</em></a> allows you to also create metadata for your datasets.</p>
+<div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-4-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-4-1" role="tab" aria-controls="tabset-4-1" aria-selected="true">R</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-4-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-4-2" role="tab" aria-controls="tabset-4-2" aria-selected="false">Jamovi</a></li></ul>
+<div class="tab-content">
+<div id="tabset-4-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-4-1-tab">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(codebook)</span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="co"># create a codebook markdown</span></span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a><span class="co"># this codebook also provides metadata</span></span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a><span class="fu">codebook</span>(anon_base_data)</span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a><span class="co"># assign attributes to the data manually </span></span>
+<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a><span class="fu">metadata</span>(anon_base_data<span class="sc">$</span>questionOne <span class="ot">&lt;-</span> <span class="st">"First question in the scale"</span>,</span>
+<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a>         anon_base_data<span class="sc">$</span>questionTwo <span class="ot">&lt;-</span> <span class="st">"Second question in the scale"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+<div id="tabset-4-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-4-2-tab">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="metadata.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Provide metadata descriptions to each variable in Jamovi</figcaption><p></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="now-its-ready-to-be-shared" class="level2" data-number="3">
+<h2 data-number="3" class="anchored" data-anchor-id="now-its-ready-to-be-shared"><span class="header-section-number">3</span> Now it’s ready to be shared</h2>
+<p>Now your data is ready to be publicly shared! There is no one best repository for data, so here is an overview of a non-exhaustive list of popular options.</p>
+<table class="table">
+<caption>Data Repositories</caption>
+<thead>
+<tr class="header">
+<th>Repository</th>
+<th>DOI</th>
+<th>Version Control</th>
+<th>Licence Alternatives</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><a href="https://zenodo.org/">Zenodo</a></td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+</tr>
+<tr class="even">
+<td><a href="https://osf.io/">OSF</a></td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+</tr>
+<tr class="odd">
+<td><a href="https://figshare.com/">figshare</a></td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+</tr>
+</tbody>
+</table>
+<section id="example-in-osf" class="level3" data-number="3.1">
+<h3 data-number="3.1" class="anchored" data-anchor-id="example-in-osf"><span class="header-section-number">3.1</span> Example in OSF</h3>
+<p>You can share your data on OSF, as a new project or a project component tied to your existing project.</p>
+<p>I recommend the following structure:</p>
+<ol type="1">
+<li>Create a project on OSF for your study</li>
+<li>Create a new component of that project and select the “Data” category</li>
+<li>To the “Data” component, upload your data files, codebooks and other accompanying files if necessary</li>
+<li>In the Wiki section of the component, explain where the data comes from, who collected it, when, who the data curators are (this can also be a standalone README file)</li>
+<li>Assign data curators as contributors of the component</li>
+<li>Register your component under the open registration form to obtain a shareable DOI and make the data immutable and time stamped</li>
+</ol>
+<p>Now your data is shared according to the FAIR principles!</p>
+</section>
+</section>
+<section id="sec-resources" class="level2" data-number="4">
+<h2 data-number="4" class="anchored" data-anchor-id="sec-resources"><span class="header-section-number">4</span> Resources</h2>
+<p>There is plenty more that goes into creating robust datasets which can easily be expanded and built upon. For ideas and guides on how to create <em>flawless</em> datasets, here are some resources:</p>
+<ul>
+<li><a href="https://github.com/psych-ds/psych-DS">Psych-DS</a> - a community-created set of standards for datasets in psychology research (which is heavily applicable to the rest of social sciences)</li>
+<li>Journal of <a href="https://openpsychologydata.metajnl.com/">Open Psychology Data</a> - a journal that “publishes peer-reviewed data papers describing psychology datasets with high reuse potential” which can serve as inspiration for creating high quality datasets (thanks to Marta Topor for the suggestion!)</li>
+<li><a href="https://bids-standard.github.io/bids-starter-kit/folders_and_files/metadata.html">BIDS</a> - provides standards for creating metadata files for brain imaging data</li>
+<li><a href="https://ardc.edu.au/resource-hub/making-data-fair/">Making data FAIR</a> - detailed guides on how to make your data FAIR</li>
+</ul>
 
 
 </section>
