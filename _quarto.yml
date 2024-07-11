@@ -1,7 +1,10 @@
 project:
   type: website
-
 website:
+  search: 
+    location: navbar
+    type: overlay
+  margin-header: subscribe.html
   google-analytics: 
     tracking-id: "G-EGKBDV26WE"
     anonymize-ip: true
