@@ -13,8 +13,8 @@ about:
     - icon: github
       text: Github
       href: https://github.com/metahag
-    - icon: bluesky
-      text: Blueksy
+    - icon: chat-left
+      text: Bluesky
       href: https://bsky.app/profile/metahag.bsky.social
 editor: source
 ---
