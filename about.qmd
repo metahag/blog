@@ -9,10 +9,13 @@ about:
       href: https://twitter.com/Luce10101
     - icon: linkedin
       text: LinkedIn
-      href: https://www.linkedin.com/lucija-batinović-4a43151a4
+      href: https://www.linkedin.com/in/lucija-batinovi%C4%87-4a43151a4
     - icon: github
       text: Github
       href: https://github.com/metahag
+    - icon: bluesky
+      text: Blueksy
+      href: https://bsky.app/profile/metahag.bsky.social
 editor: source
 ---
 
