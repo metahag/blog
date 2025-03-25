@@ -42,3 +42,5 @@ Batinovic, L., Howe, M., Sinclair, S., & Carlsson, R. (2023). Ageism in hiring: 
 Nordström, T., Kalmendal, A., & Batinovic, L. (2023). Risk of bias and open science practices in systematic reviews of educational effectiveness: A meta-review. Review of Education, 11, e3443. [https://doi.org/10.1002/rev3.3443](https://doi.org/10.1002/rev3.3443) 
 
 Stacey, J. E., Danielsson, H., Heinrich, A., Batinović, L., Holmer, E., Ingo, E., and Henshaw, H. (2023). Relationship between self-reported listening and communication difficulties and executive function: A protocol for a systematic review and meta-analysis. BMJ Open, 13, e071225. [https://doi.org/10.1136/bmjopen-2022-071225](https://doi.org/10.1136/bmjopen-2022-071225)
+
+Kalmendal, A., Batinovic, L., Claesson, F., & Carlsson, R. (2025). Living Review Platform for Educational Interventions: The Evidence in Learning Community Augmented Meta-analysis. [https://doi.org/10.31234/osf.io/hjku5_v1](https://doi.org/10.31234/osf.io/hjku5_v1) [Preprint]
