@@ -1,6 +1,6 @@
 ---
 title: "GRADE your meta-analysis"
-description: "Introduction to meta-analysis through the GRADE assessment domains"
+description: "An introduction to meta-analysis, following the GRADE assessment domains for evaluation"
 author: "Lucija Batinović"
 date: "2025-10-01"
 categories:
