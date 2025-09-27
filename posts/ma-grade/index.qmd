@@ -2,7 +2,7 @@
 title: "GRADE your meta-analysis"
 description: "An introduction to meta-analysis, following the GRADE assessment domains for evaluation"
 author: "Lucija Batinović"
-date: "2025-10-01"
+date: "2025-09-27"
 categories:
   - open science
   - reproducibility
