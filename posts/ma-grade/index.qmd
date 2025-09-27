@@ -2,7 +2,7 @@
 title: "GRADE your meta-analysis"
 description: "Introduction to meta-analysis through the GRADE assessment domains"
 author: "Lucija Batinović"
-date: "`2025-10-01"
+date: "2025-10-01"
 categories:
   - open science
   - reproducibility
@@ -38,8 +38,7 @@ To make conclusions about a phenomenon after conducting a systematic review, we 
 
 GRADE is
 
-> "a well-developed formal process to rate the quality of scientific evidence in
-systematic reviews and to develop recommendations in guidelines that are as evidence-based as possible" 
+> "a well-developed formal process to rate the quality of scientific evidence in systematic reviews and to develop recommendations in guidelines that are as evidence-based as possible" 
 
 Use **GRADE** to evaluate evidence based on:
 
@@ -64,7 +63,7 @@ Use **GRADE** to evaluate evidence based on:
 
 This document provides information for addressing *imprecision*, *inconsistency*, and *risk of bias* and *publication bias*. The code provided demonstrates how to conduct the synthesis in an open and reproducible way. Risk of bias assessment and indirectness are not covered in depth.
 
-# 1. Imprecision
+# 1. Imprecision {#sec-imprecision}
 ## Choosing and Estimating Effect Size
 
 > Effect size: *“A quantitative reflection of the magnitude of some phenomenon that is used for the purpose of addressing a question of interest”* [(Kelley & Preacher, 2012)](https://psycnet.apa.org/doi/10.1037/a0028086)
@@ -336,7 +335,7 @@ Interpretation of I²:
 | 50–90  | Substantial    |
 | 75–100 | Considerable   |
 
-According to this, in the analysis conducted in the *imprecision* section, we found low heterogeneity, i.e., variance (τ²) = `r round(m[['tau2']],7)`. From variance, we can also look at the standard deviation of the distribution of the effects, i.e., τ = `r round(sqrt(m[['tau2']]),4)`), which is a more easily interpretable value than variance. 
+According to this, in the analysis conducted in the @sec-imprecision section, we found low heterogeneity, i.e., variance (τ²) = `r round(m[['tau2']],7)`. From variance, we can also look at the standard deviation of the distribution of the effects, i.e., τ = `r round(sqrt(m[['tau2']]),4)`), which is a more easily interpretable value than variance. 
 I² is also low (`r round(m[['I2']],2)`%), i.e., the heterogeneity due to differences between populations or study designs is low, which means the effect is robust across populations.
 
 Along heterogeneity, to evaluate the robustness of the effect, we should conduct a sensitivity analysis to find any studies that potentially drive the effect estimate up or down. Generally, a meta-analysis can be accompanied by a sensitivity analysis called "leave-one-out" analysis. This approach involves conducting the meta-analysis k number of times, each time excluding a different study, until each study in the set has been excluded once. Consequently, this allows us to identify which studies (if any) largely influence the average effect size estimate and whether such bias skews the outcomes of the meta-analysis.
@@ -478,8 +477,8 @@ When it comes to imprecision, as evident from the forest plot and the model outp
 Taking all domains into consideration, although we found consistency among studies and no publication bias, due to low precision and moderate risk of bias, we conclude there is a moderate certainty of presented evidence.
 
 
-# Session Info
+# Loaded packages
 ```{r}
 #| echo: false
-sessionInfo()
+search()
 ```

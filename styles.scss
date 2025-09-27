@@ -1,10 +1,11 @@
 /*-- scss:defaults --*/
 $primary:  #BBDDC5 !default;
 $font-family-base:  SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default;
-$body-color: #4F9D69 !default;
+$body-color: #002925 !default;
 $headings-font-family:  "Courier New", Roboto !default;
 $navbar-bg: #BBDDC5;
-$link-color: #648844;
+$link-color: #003D37;
+$blockquote-color: darken($body-color, 10%) !default;
 
 /*-- scss:rules --*/
 header#quarto-header.headroom.fixed-top.headroom--top.headroom--not-bottom {
@@ -21,6 +22,12 @@ body {
   background-color: $primary;
   color: $body-color;
 }
+
+.blockquote {
+  color: #003D37;    
+  font-style: italic;
+}
+
 /*-- 
     fontcolor: "#F6F3F5" 
     backgroundcolor: "#648844"
