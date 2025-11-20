@@ -35,3 +35,22 @@ body {
     mainfont: "Gill Sans"
     monobackgroundcolor: "#094918"
 --*/
+
+/* Make footnote block match body background */
+section.footnotes,
+section.footnotes *,
+.footnotes {
+  background-color: $primary !important;
+  color: $body-color !important;
+}
+
+/* Remove white divider line before footnotes */
+hr.footnotes-sep {
+  border-color: $primary;
+  background-color: $primary;
+}
+
+section.footnotes a {
+  color: $link-color;
+}
+
