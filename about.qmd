@@ -1,49 +1,97 @@
 ---
-title: "About"
-image: profile.jpg
-about:
-  template: jolla
-  links:
-    - icon: twitter
-      text: Twitter
-      href: https://twitter.com/Luce10101
-    - icon: linkedin
-      text: LinkedIn
-      href: https://www.linkedin.com/in/lucija-batinovi%C4%87-4a43151a4
-    - icon: github
-      text: Github
-      href: https://github.com/metahag
-    - icon: chat-left
-      text: Bluesky
-      href: https://bsky.app/profile/metahag.bsky.social
-editor: source
+title: "CV"
+format:
+  html:
+    toc: true
+  pdf:
+    author: Lucija Batinović
+    pdf-engine: weasyprint
+format-links: [pdf]
 ---
 
-*eLucidate Science* is a collection of guides and tips for (under)graduate students and others interested in learning about open and reproducible science. Articles are based on my experience as a PhD student and reproducibility reviewer for [Meta-Psychology](https://open.lnu.se/index.php/metapsychology/).
+::: {.print-only .contact-block}
+lucija.batinovic@liu.se
+:::
 
-## Education
+## EDUCATION
 
-Linköping University \| Linköping, Sweden PhD in Disability Research \| Jan 2022 - present
+**Ph.D -- Disability Research** <br> *Linköping University* [*Jan 2022 --- Present*]{.cvdate}
 
-Linnaeus University \| Växjö, Sweden M.Sc. in Work and Organizational Psychology \| 2019 - 2021
+-  Open Science and Evidence Synthesis In Special Education
 
-University of Zadar \| Zadar, Croatia Bachelor of Psychology \| 2016 - 2019
+**M.Sc. -- Work and Organizational Psychology** <br> *Linnaeus University* [*2019 --- 2021*]{.cvdate}
 
-## Experience
+- Systematic review of age discrimination in hiring
 
-Editorial Assistant and Reproducibility Coordinator at [Meta-Psychology](https://open.lnu.se/index.php/metapsychology/) \| Linnaeus University \| 2021 - present
+**B.A. -- Psychology** <br> *University of Zadar* [*2016 --- 2019*]{.cvdate}
 
-Research Assistant \| Linnaeus University \| 2021 - 2022
+## WORK EXPERIENCE
 
-## Publications
-Batinović, L., Pickering, J. S., van den Akker, O. R., Bishop, D., Elsherif, M., Evans, T. R., Gibbs, M., Kalandadze, T., Staaks, J., & Topor, M. (2025). Gold in, gold out. Quality appraisal and risk of bias tools to assess non-intervention studies for systematic reviews in the behavioural sciences: A scoping review. In principle acceptance of Version 3 by Peer Community in Registered Reports. [https://osf.io/4gy5b](https://osf.io/4gy5b)
+**Editorial Assistant and Reproducibility Coordinator** at [Meta-Psychology](https://open.lnu.se/index.php/metapsychology/) <br> *Linnaeus University* [*2021 --- Present*]{.cvdate}
 
-Carlsson, R., Batinović, L., Hyltse, N., Kalmendal, A., Nordström, T., & Topor, M. (2024). A beginner’s guide to open and reproducible systematic reviews in psychology. Collabra: Psychology, 10(1), 126218. [https://doi.org/10.1525/collabra.126218](https://doi.org/10.1525/collabra.126218)
+- Conducted over 35 reproducibility checks of statistical analyses of various complexities, from simulations to multilevel models and meta-analyses. 
+- Developed guidelines for reproducibility checks used by other reproducibility reviewers, and created guidelines for the journal’s reproducibility requirements.
+- Reviewed adherence to preregistrations of the submitted articles.
 
-Batinovic, L., Howe, M., Sinclair, S., & Carlsson, R. (2023). Ageism in hiring: A systematic review and meta-analysis of age discrimination. Collabra: Psychology, 9(1). [https://doi.org/10.1525/collabra.82194](https://doi.org/10.1525/collabra.82194)
+**Research Assistant** <br> *Linnaeus University* [*2021 --- 2022*]{.cvdate}
 
-Nordström, T., Kalmendal, A., & Batinovic, L. (2023). Risk of bias and open science practices in systematic reviews of educational effectiveness: A meta-review. Review of Education, 11, e3443. [https://doi.org/10.1002/rev3.3443](https://doi.org/10.1002/rev3.3443) 
+- Screened, extracted, synthesized and assessed risk of bias of original studies and systematic reviews in systematic and meta-reviews
 
-Stacey, J. E., Danielsson, H., Heinrich, A., Batinović, L., Holmer, E., Ingo, E., and Henshaw, H. (2023). Relationship between self-reported listening and communication difficulties and executive function: A protocol for a systematic review and meta-analysis. BMJ Open, 13, e071225. [https://doi.org/10.1136/bmjopen-2022-071225](https://doi.org/10.1136/bmjopen-2022-071225)
+## TEACHING AND TALKS
 
-Kalmendal, A., Batinovic, L., Claesson, F., & Carlsson, R. (2025). Living Review Platform for Educational Interventions: The Evidence in Learning Community Augmented Meta-analysis. [https://doi.org/10.31234/osf.io/hjku5_v1](https://doi.org/10.31234/osf.io/hjku5_v1) [Preprint]
+- Teaching and material development for master students: systematic reviews, open science and reproducibility in statistics (LiU, 2024; 2025)
+- Introduction to meta-analysis for Psychology Students at University of Split
+
+- Seminar about Computational reproducibility checks in scientific publishing at the Stanford Meta-Research Innovation Center in 2023 (Talk available [here](https://www.youtube.com/watch?v=3B2wxBvaY-0); [slides](https://metahag.github.io/MP_reproducibility_workshop/#/title-slide))
+
+- [Seminar/workshop](https://docs.google.com/presentation/d/12HE780SinSCMUDikpeDn90glPex_TKjE/edit?slide=id.p1#slide=id.p1) on preregistration and computational reproducibility mistakes for the Danish Reproducibility Network in 2025
+
+- SIPS workshop on computational errors in reproducibility checks (Padova 2023)
+
+- Batinović, L., & Andre, K. (2023). ELD CAMA platform for educational interventions. 4th symposium on big data and research syntheses in psychology. https://urn.kb.se/resolve?urn=urn:nbn:se:liu:diva-200463
+
+- Batinović, L., & Kalmendal, A. (2023). ELD CAMA Platform: Facilitating Meta-Analyses and Evidence-Based Practice in Education. QRM Conference 2023, Pedagogen, Gothenburg University, Gothenburg, Sweden, June 12-13, 2023. https://urn.kb.se/resolve?urn=urn:nbn:se:liu:diva-194976
+
+- Batinovic, L., & Kalmendal, A. (2024). Community Augmented Meta-Analysis of Evidence in Learning and Didactics. META-REP 2024, October 28-31, München. https://urn.kb.se/resolve?urn=urn:nbn:se:lnu:diva-133241
+
+- Carlsson, R., Batinovic, L., Kalmendal, A., Nordström, T., & Bergmann, C. (2021). Community Augmented Meta-analysis. Swedish Reproducibility Network (SweRN) and 2nd annual conference of Open Science Community Sweden, Stockholm, November 25, 2021. https://urn.kb.se/resolve?urn=urn:nbn:se:lnu:diva-108280
+
+- Nordström, T., Kalmendal, A., Batinovic, L., Däldborg, P., Dahl, H., Hyltse, N., & Carlsson, R. (2024). Reproducibility, Open Science, FAIR and Risk Of Bias in Educational Systematic Reviews: A systematic living meta-review of research standards. META-REP 2024, the conference on meta-science and replicability in the social, behavioural, and cognitive sciences. Munich, Germany, October 28 - 31, 2024. https://urn.kb.se/resolve?urn=urn:nbn:se:lnu:diva-133228
+
+
+## EVIDENCE DASHBOARDS
+
+- Shiny apps for meta-analysis on a [living review platform](https://wanda.lnu.se/apps) 
+- Interactive [dataset](http://wanda.lnu.se:3838/scoping_review_school_id/shiny_app_scoping/) of school interventions for students with intellectual disability
+
+## PAPERS
+
+### PUBLICATIONS
+
+- Kniffert, S., Buljan, I., Azevedo, F., Babinčák, P., Batinović, L., Evans, T. R., Garofalo, S., Graham, C., Groenink, L., Ihle, M., Klugar, M., Kočišová, L., Kohút, M., Kostomitsopoulos, N., Lacey, S., Lunić, A., Marušić, A., Nordström, T., Pennington, C. R., … de Boer, M. R. (2025). Research methodology education in Europe: A multi-country, cross-disciplinary survey of current practices and perspectives. Research Integrity and Peer Review, 10(1), 24. https://doi.org/10.1186/s41073-025-00183-x
+
+- Carlsson, R., Batinović, L., Hyltse, N., Kalmendal, A., Nordström, T., & 
+Topor, M. (2024). A Beginner’s Guide to Open and Reproducible Systematic Reviews in Psychology. Collabra: Psychology, 10(1), 126218. https://doi.org/10.1525/collabra.126218
+
+- Batinovic, L., Howe, M., Sinclair, S., & Carlsson, R. (2023). Ageism in Hiring: A Systematic Review and Meta-analysis of Age Discrimination. Collabra: Psychology, 9(1), 82194. https://doi.org/10.1525/collabra.82194
+
+
+- Nordström, T., Kalmendal, A., & Batinovic, L. (2023). Risk of bias and open science practices in systematic reviews of educational effectiveness: A meta-review. Review of Education, 11(3), e3443. https://doi.org/10.1002/rev3.3443
+
+- Stacey, J. E., Danielsson, H., Heinrich, A., Batinović, L., Holmer, E., Ingo, E., & Henshaw, H. (2023). Relationship between self-reported listening and communication difficulties and executive function: A protocol for a systematic review and meta-analysis. BMJ Open, 13(11), e071225. https://doi.org/10.1136/bmjopen-2022-071225
+
+### PREPRINTS
+
+- Batinovic, L., Carlsson, R., Caquelin, L., Danielsson, H., Brown, N. J. L., Nilsonne, G., Nordström, T., Westwood, S. J., Heathers, J., Kalmendal, A., Topor, M., Fillon, A., Cummins, J., & Hyltse, N. (2025). Developing and Piloting a QUick Evaluation of Research Integrity for Evidence Synthesis in Education (QUERIES-Edu). OSF Registries. https://doi.org/10.17605/OSF.IO/TC5N3
+
+- Batinović, L., Pickering, J. S., van den Akker, O. R., Bishop, D., Elsherif, M., Evans, T. R., Gibbs, M., Kalandadze, T., Staaks, J., & Topor, M. (2025). Stage 1: Gold in, gold out. Quality appraisal and risk of bias tools to assess non-intervention studies for systematic reviews in the behavioural sciences: A scoping review. Peer Community in Registered Reports. https://doi.org/10.17605/OSF.IO/4GY5B
+
+- Batinović, L., Topor, M., Henriksson, I., Allgulin, M., Jonson, E., Carlsson, R., & Danielsson, H. (2025). School-based interventions for primary and secondary school students with intellectual disability: A scoping review. PsyArXiv. https://doi.org/10.31234/osf.io/heujm_v1
+
+- Batinovic, L., Topor, M., Ivarsson, M., Levén, A., Danielsson, H., Figuerola, C. T., Nilsson, K., & Andin, J. (2025). A systematic review of short-term and working memory span abilities in children with intellectual disability; do the results support the delay or difference hypothesis? OSF Registries. https://doi.org/10.17605/OSF.IO/BKE9Z
+
+- Kalmendal Bruns, A., Carlsson, R., & Batinovic, L. (2025). Living Review Platform for Educational Interventions: The Evidence in Learning Community Augmented Meta-analysis (Hjku5_v1). PsyArXiv. https://doi.org/10.31234/osf.io/hjku5_v1
+
+- Topor, M., & Danielsson, H. (2025). Cognition and Intellectual Disability (CO-IND) Collaboration Project Registered Report. OSF Registries. https://doi.org/10.17605/OSF.IO/9G2W8
+
+- Batinovic, L., Hammarsten, J., Nilsson, K., Topor, M., Holmer, E., Parlett-Pelleriti, C., & Danielsson, H. (2024). Effectiveness of Reading Interventions on Word Recognition for Students with Intellectual Disability: A Systematic Review and IPD Meta-analysis of Single Case Experimental Designs. PsyArXiv. https://doi.org/10.31234/osf.io/xu536

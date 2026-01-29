@@ -1,16 +1,25 @@
 ---
-title: "Blog Posts"
-listing:
-  contents: posts
-  feed: true
-  sort: "date desc"
-  type: table
-  table-striped: true
-  categories: true
-  sort-ui: false
-  filter-ui: false
-  fields: [date, title, reading-time]
-page-layout: full
-title-block-banner: false
+title: "Hi!"
+image: profile.jpg
+about:
+  template: jolla
+  links:
+    - icon: linkedin
+      text: LinkedIn
+      href: https://www.linkedin.com/in/lucija-batinovi%C4%87-4a43151a4
+    - icon: github
+      text: Github
+      href: https://github.com/metahag
+    - icon: chat-left
+      text: Bluesky
+      href: https://bsky.app/profile/metahag.bsky.social
+editor: source
 ---
+
+I’m Lucija, PhD student at Linköping University, working on improving evidence synthesis methods in psychological, social and educational sciences. I enjoy supporting open science practices and developing workflows that make reproducible and open evidence synthesis less intimidating and exhausting. I have written protocols for various types of systematic reviews and screened tens of thousands of articles, extracted data from hundreds of articles and conducted various quality appraisals. I've also been the Editorial Assistant and Reproducibility Coordinator for [Meta-Psychology](https://open.lnu.se/index.php/metapsychology/) since 2021.
+
+I am in the process of developing systematic workflows for systematic reviews (pun intended), and making them accessible and reproducible. You can read more about these topics in my [posts](blog.qmd) and [working papers](about.qmd).
+
+Feel free to contact me with any questions: lucija.batinovic@liu.se
+
 

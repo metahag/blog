@@ -1,0 +1,56 @@
+/*-- scss:defaults --*/
+$primary:  #BBDDC5 !default;
+$font-family-base:  SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default;
+$body-color: #002925 !default;
+$headings-font-family:  "Courier New", Roboto !default;
+$navbar-bg: #BBDDC5;
+$link-color: #003D37;
+$blockquote-color: darken($body-color, 10%) !default;
+
+/*-- scss:rules --*/
+header#quarto-header.headroom.fixed-top.headroom--top.headroom--not-bottom {
+  font-family: "Courier New", Roboto, $headings-font-family;
+  font-size: $font-size-base * 1.2;
+}
+
+#title-block-header {
+  font-family: "Courier New", Roboto, $headings-font-family;
+  font-size: $font-size-base * 1.2;
+}
+
+body {
+  background-color: $primary;
+  color: $body-color;
+}
+
+.blockquote {
+  color: #003D37;    
+  font-style: italic;
+}
+
+/*-- 
+    fontcolor: "#F6F3F5" 
+    backgroundcolor: "#648844"
+    linkcolor: "#111418"
+    mainfont: "Gill Sans"
+    monobackgroundcolor: "#094918"
+--*/
+
+/* Make footnote block match body background */
+section.footnotes,
+section.footnotes *,
+.footnotes {
+  background-color: $primary !important;
+  color: $body-color !important;
+}
+
+/* Remove white divider line before footnotes */
+hr.footnotes-sep {
+  border-color: $primary;
+  background-color: $primary;
+}
+
+section.footnotes a {
+  color: $link-color;
+}
+

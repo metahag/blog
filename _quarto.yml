@@ -12,8 +12,14 @@ website:
   title: "eLucidate science"
   navbar:
     background: "#111418"
+    left:
+      - href: index.qmd
+        text: Home
+      - href: blog.qmd
+        text: Blog
+      - href: about.qmd
+        text: CV
     right:
-      - about.qmd
       - icon: github
         href: https://github.com/metahag
       - icon: instagram
@@ -21,7 +27,6 @@ website:
 format:
   html:
     theme: styles.scss
-
-
+    page-layout: full
 editor: source
 
