@@ -18,7 +18,7 @@ editor: source
 
 I’m Lucija, PhD student at Linköping University, working on improving evidence synthesis methods in psychological, social and educational sciences. I enjoy supporting open science practices and developing workflows that make reproducible and open evidence synthesis less intimidating and exhausting. I have written protocols for various types of systematic reviews and screened tens of thousands of articles, extracted data from hundreds of articles and conducted various quality appraisals. I've also been the Editorial Assistant and Reproducibility Coordinator for [Meta-Psychology](https://open.lnu.se/index.php/metapsychology/) since 2021.
 
-I am in the process of developing systematic workflows for systematic reviews (pun intended), and making them accessible and reproducible. You can read more about these topics in my [posts](blog.qmd) and [working papers](about.qmd).
+You can read more about topics that interest me in my [posts](blog.qmd) and [working papers](about.qmd).
 
 Feel free to contact me with any questions: lucija.batinovic@liu.se
 
