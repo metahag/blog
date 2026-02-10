@@ -75,12 +75,13 @@ Topor, M. (2024). A Beginner’s Guide to Open and Reproducible Systematic Revie
 
 - Batinovic, L., Howe, M., Sinclair, S., & Carlsson, R. (2023). Ageism in Hiring: A Systematic Review and Meta-analysis of Age Discrimination. Collabra: Psychology, 9(1), 82194. https://doi.org/10.1525/collabra.82194
 
-
 - Nordström, T., Kalmendal, A., & Batinovic, L. (2023). Risk of bias and open science practices in systematic reviews of educational effectiveness: A meta-review. Review of Education, 11(3), e3443. https://doi.org/10.1002/rev3.3443
 
 - Stacey, J. E., Danielsson, H., Heinrich, A., Batinović, L., Holmer, E., Ingo, E., & Henshaw, H. (2023). Relationship between self-reported listening and communication difficulties and executive function: A protocol for a systematic review and meta-analysis. BMJ Open, 13(11), e071225. https://doi.org/10.1136/bmjopen-2022-071225
 
 ### PREPRINTS
+
+- Hornung, Roman, László Németh, Oleksandr Zadorozhny, Theresa Ullmann, Michael Kammer, Rebecca Killick, Christopher J. Paciorek, et al. (2026). “Overcoming Barriers to Computational Reproducibility”. https://doi.org/10.48550/ARXIV.2602.03863
 
 - Batinovic, L., Carlsson, R., Caquelin, L., Danielsson, H., Brown, N. J. L., Nilsonne, G., Nordström, T., Westwood, S. J., Heathers, J., Kalmendal, A., Topor, M., Fillon, A., Cummins, J., & Hyltse, N. (2025). Developing and Piloting a QUick Evaluation of Research Integrity for Evidence Synthesis in Education (QUERIES-Edu). OSF Registries. https://doi.org/10.17605/OSF.IO/TC5N3
 
@@ -95,3 +96,8 @@ Topor, M. (2024). A Beginner’s Guide to Open and Reproducible Systematic Revie
 - Topor, M., & Danielsson, H. (2025). Cognition and Intellectual Disability (CO-IND) Collaboration Project Registered Report. OSF Registries. https://doi.org/10.17605/OSF.IO/9G2W8
 
 - Batinovic, L., Hammarsten, J., Nilsson, K., Topor, M., Holmer, E., Parlett-Pelleriti, C., & Danielsson, H. (2024). Effectiveness of Reading Interventions on Word Recognition for Students with Intellectual Disability: A Systematic Review and IPD Meta-analysis of Single Case Experimental Designs. PsyArXiv. https://doi.org/10.31234/osf.io/xu536
+
+### OTHER
+
+- Chairperson of LiUPhD (PhD Association at Linköping University) 2022-2024
+
