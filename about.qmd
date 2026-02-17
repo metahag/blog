@@ -17,7 +17,7 @@ lucija.batinovic@liu.se
 
 **Ph.D -- Disability Research** <br> *Linköping University* [*Jan 2022 --- Present*]{.cvdate}
 
--  Open Science and Evidence Synthesis In Special Education
+-  Open Science and Evidence Synthesis in Special Education
 
 **M.Sc. -- Work and Organizational Psychology** <br> *Linnaeus University* [*2019 --- 2021*]{.cvdate}
 
@@ -68,6 +68,8 @@ lucija.batinovic@liu.se
 
 ### PUBLICATIONS
 
+- Batinović, L., Topor, M., Henriksson, I., Allgulin, M., Pescador, X., Jonsson, E., Windsor, C., Krilanovic, A., Carlsson, R., & Danielsson, H. (2026). School-based interventions for primary and secondary school students with intellectual disability: A scoping review. International Journal of Educational Research, 137, 102960. https://doi.org/10.1016/j.ijer.2026.102960
+
 - Kniffert, S., Buljan, I., Azevedo, F., Babinčák, P., Batinović, L., Evans, T. R., Garofalo, S., Graham, C., Groenink, L., Ihle, M., Klugar, M., Kočišová, L., Kohút, M., Kostomitsopoulos, N., Lacey, S., Lunić, A., Marušić, A., Nordström, T., Pennington, C. R., … de Boer, M. R. (2025). Research methodology education in Europe: A multi-country, cross-disciplinary survey of current practices and perspectives. Research Integrity and Peer Review, 10(1), 24. https://doi.org/10.1186/s41073-025-00183-x
 
 - Carlsson, R., Batinović, L., Hyltse, N., Kalmendal, A., Nordström, T., & 
@@ -86,8 +88,6 @@ Topor, M. (2024). A Beginner’s Guide to Open and Reproducible Systematic Revie
 - Batinovic, L., Carlsson, R., Caquelin, L., Danielsson, H., Brown, N. J. L., Nilsonne, G., Nordström, T., Westwood, S. J., Heathers, J., Kalmendal, A., Topor, M., Fillon, A., Cummins, J., & Hyltse, N. (2025). Developing and Piloting a QUick Evaluation of Research Integrity for Evidence Synthesis in Education (QUERIES-Edu). OSF Registries. https://doi.org/10.17605/OSF.IO/TC5N3
 
 - Batinović, L., Pickering, J. S., van den Akker, O. R., Bishop, D., Elsherif, M., Evans, T. R., Gibbs, M., Kalandadze, T., Staaks, J., & Topor, M. (2025). Stage 1: Gold in, gold out. Quality appraisal and risk of bias tools to assess non-intervention studies for systematic reviews in the behavioural sciences: A scoping review. Peer Community in Registered Reports. https://doi.org/10.17605/OSF.IO/4GY5B
-
-- Batinović, L., Topor, M., Henriksson, I., Allgulin, M., Jonson, E., Carlsson, R., & Danielsson, H. (2025). School-based interventions for primary and secondary school students with intellectual disability: A scoping review. PsyArXiv. https://doi.org/10.31234/osf.io/heujm_v1
 
 - Batinovic, L., Topor, M., Ivarsson, M., Levén, A., Danielsson, H., Figuerola, C. T., Nilsson, K., & Andin, J. (2025). A systematic review of short-term and working memory span abilities in children with intellectual disability; do the results support the delay or difference hypothesis? OSF Registries. https://doi.org/10.17605/OSF.IO/BKE9Z
 
