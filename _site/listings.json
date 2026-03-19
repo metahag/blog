@@ -1,18 +1,8 @@
 [
   {
-    "listing": "/index.html",
-    "items": [
-      "/posts/searches/index.html",
-      "/posts/ma-grade/index.html",
-      "/posts/open_science/index.html",
-      "/posts/introduction/index.html"
-    ]
-  },
-  {
     "listing": "/blog.html",
     "items": [
       "/posts/searches/index.html",
-      "/posts/reproducibility_challenge/index.html",
       "/posts/ma-grade/index.html",
       "/posts/open_science/index.html",
       "/posts/introduction/index.html"
