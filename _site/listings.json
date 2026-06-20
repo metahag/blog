@@ -2,6 +2,7 @@
   {
     "listing": "/blog.html",
     "items": [
+      "/posts/bibliometrics/bibliometrics.html",
       "/posts/searches/index.html",
       "/posts/ma-grade/index.html",
       "/posts/open_science/index.html",
