@@ -1,0 +1,173 @@
+---
+title: "Bibliometrics after screening"
+description: "Getting bibliometric data from a set of studies included in a review"
+author: "Lucija Batinović"
+date: "2026-07-01"
+categories:
+  - open science
+  - evidence synthesis
+  - bibliometrics
+format:
+  html:
+    grid:
+      body-width: 1000px
+    embed-resources: true
+    self-contained-math: true 
+    code-overflow: scroll
+    toc: true
+editor: source
+execute: 
+  echo: TRUE
+  message: FALSE
+  warning: FALSE
+  error: FALSE
+  output: TRUE
+  eval: TRUE
+---
+
+#
+
+I have been doing a couple of projects now where we have done some sort of review and we want a bibliometric analysis of the included studies. This means that we first curate a dataset by screening and extracting data, and then have the final set we should analyze, as opposed to the common route of performing a search, downloading the retrieved results in a selected format and analyzing that dataset. This also means that the final dataset I have usually loses the structure and metadata needed to analyse studies using most common softwares for bibliometrics.
+
+I would usually suggest the `bibliometrix` package for the plots, but for my use-case, it requires practically re-running a search with the included studies, which is a tedious job when you have hundreds of articles with varying metadata quality. 
+
+`openalexR` is a neat R package that allows you to retrieve studies directly to R through their API. However, transition from the OpenAlex dataset to `bibliometrix` compatible one doesn't seem to work for me (neither with *oa2bibliometrix()* nor *convert2df()*), so I've decided to write a workaround by plotting the networks with `ggraph` instead.
+
+Below I explain the process of creating a bibliographic dataframe from limited bibliographic metadata you might have after finishing data extraction. For the example, I selected a subset of studies from my [scoping review](https://doi.org/10.1016/j.ijer.2026.102960), as I'm preparing that analysis among others.
+
+```{r}
+#| label: setup
+#| echo: true
+#| code-fold: true
+
+library(tidyverse)
+library(ggraph)
+library(igraph)
+library(tidygraph)
+library(bib2df)
+library(here)
+
+```
+
+First, I'll import the reference file of the subset into a dataset and filter out dissertations, because I only want to keep journal articles. This was manually checked by sorting the journal column and looking for non-journal items. Any other column was too inconsistent to use as a filter, which is very common with SCOPUS[^1] searches. 
+
+[^1]: It seems that the metadata quality is rapidly declining, go off Elsevier.
+ 
+```{r}
+reports <- bib2df::bib2df(here("posts", "bibliometrics", "subset_blog.bib"))
+
+articles <- reports %>% 
+  filter(!is.na(JOURNAL) & JOURNAL != "ProQuest LLC" & !grepl("Dissertation", JOURNAL))
+
+```
+
+We have `r count(articles)` journal articles. We should also check how many articles have a DOI.
+```{r}
+n_doi <- articles %>% filter(!is.na(DOI)) %>% count() 
+```
+
+There are `r n_doi` articles with a DOI. That means we need to find a different way to search for the other `r count(articles) - n_doi` without a DOI. That can be done through a title search, which `openalexR` also supports. I'm not going to deal with that in this post though.
+
+I will look for the articles in OpenAlex, because I get similar metadata as in other databases, and the included studies came from multiple databases, so this way I can gather them all in one. 
+
+Before getting your DOIs for the search, also make sure they are all in a correct format, without any symbols that will break the query (e.g., trim white space). My dataset already has "https://doi.org" removed, but you can remove that too, as it increases the query call needlessly. 
+
+```{r}
+
+dois <- articles %>% filter(!is.na(DOI)) %>% select(DOI) #choose only the doi column
+dois <- dois[["DOI"]] #turn into a vector 
+
+```
+
+`openalexR` facilitates the use of their API. Follow instructions on their package website to set up your API key: <https://openalex.org/settings/api>. After the studies are fetched, I'll save the object as RData (or save it as a csv) and reuse that later, so I don't have to re-run the search whenever I run the script. That also ensures the retrieved articles are always the same. 
+
+You can find how to use the package [here](https://docs.ropensci.org/openalexR/). I will conduct a search using the DOIs.
+```{r}
+#install.packages("remotes")
+#remotes::install_github("ropensci/openalexR")
+library(openalexR)
+
+#paper_meta <- oa_fetch(
+#  doi = dois, #list of DOIs
+#  entity = "works",
+#  abstract = TRUE,
+#  verbose = TRUE
+#)
+
+#save(paper_meta, file=here("posts", "bibliometrics", "paper_meta.Rdata"))
+load(here("posts", "bibliometrics", "paper_meta.Rdata"))
+studies <- paper_meta %>% unnest(authorships, names_sep = "_") %>% unnest(authorships_affiliations, names_sep = "_")
+
+```
+
+## Network plots
+Now that I have the dataset, I can start doing the analyses. Data from the authors has been unnested in a long format, which is already the format we need to produce a co-occurrence matrix. The co-occurrence matrix provides a matrix of each author in the dataset and defines frequency of each pair of authors appearing on the same article.
+
+### Author collaborations
+
+We can plot the author collaboration network with `ggraph` (code below). Selection of the layout depends on the data in space. For this network, I set the algorithm for the layout to be Kamada-Kawai (layout = 'kk'). Other layouts might be fitting for different data.
+```{r}
+set.seed(2026)
+matrix <- crossprod(table(studies[,c("id", "authorships_display_name")]))
+diag(matrix) <- 0
+
+graph <- as_tbl_graph(matrix) %>% 
+    mutate(degree = centrality_degree(mode = 'in'))
+
+graph_one <- ggraph(graph, layout = 'kk') +
+  geom_edge_link() +
+  geom_node_point(aes(color = degree), size=3) +
+  theme_graph(background = 'white') 
+
+graph_one
+
+```
+
+As this does not provide much information, I'll increase visibility of stronger connections and add names to the authors that have most collaborations.
+```{r}
+graph_two <- ggraph(graph, layout = 'kk') +
+  geom_edge_link(aes(alpha = weight)) +
+  geom_node_point(aes(size = degree, alpha = degree), colour = "forestgreen")  +
+  geom_node_text(aes(filter = degree > 10, label = name, size = degree), repel = TRUE, max.overlaps = 15) +
+  theme_graph(background = 'white') +
+  theme(legend.position = "none")
+
+graph_two
+```
+
+
+### Institution arc diagram
+
+From the same dataset, I can also draw a arc diagram of affiliations and their collaborations. Darker nodes (circles at the bottom of the diagram) represent more collaboration points. 
+
+```{r}
+set.seed(202601)
+aff_matrix <- crossprod(table(studies[,c("id", "authorships_affiliations_display_name")]))
+diag(aff_matrix) <- 0
+
+aff_graph <- as_tbl_graph(aff_matrix) %>% 
+    mutate(degree = centrality_degree(mode = 'in')) 
+
+graph_three <- ggraph(aff_graph, layout = 'linear') +
+  geom_edge_arc(edge_colour="black", edge_alpha=0.2, edge_width=0.2, fold=TRUE) +
+  geom_node_point(aes(size=degree, alpha = degree, color = degree)) +
+  scale_color_gradient(low = "lightgreen", high = "darkgreen") +
+  geom_node_text(aes(filter = degree > 5, label=name), angle=45, hjust=1, nudge_y = -1.1, size=1.3) +
+  theme_void() +
+  theme(
+    legend.position="none",
+    plot.margin=unit(c(0,0,0.4,0), "null"),
+    panel.spacing=unit(c(0,0,3.4,0), "null")
+  ) +
+  expand_limits(x = c(-5.2, 1.2), y = c(-40.6, 1.2))
+
+graph_three
+
+```
+
+Anyway, this is the closest I could get to emulating bibliometrix with a bit more flexibility. I would love to hear about other (probably better) ways to solve this!
+
+```{r}
+sessionInfo()
+```
+
