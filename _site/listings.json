@@ -2,11 +2,12 @@
   {
     "listing": "/blog.html",
     "items": [
-      "/posts/bibliometrics/bibliometrics.html",
       "/posts/searches/index.html",
       "/posts/ma-grade/index.html",
+      "/posts/introduction/index.html",
+      "/posts/deduplication/deduplication.html",
       "/posts/open_science/index.html",
-      "/posts/introduction/index.html"
+      "/posts/bibliometrics/bibliometrics.html"
     ]
   }
 ]

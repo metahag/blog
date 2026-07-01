@@ -2,7 +2,7 @@
 title: "Bibliometrics after screening"
 description: "Getting bibliometric data from a set of studies included in a review"
 author: "Lucija Batinović"
-date: "2026-07-01"
+date: "`r Sys.Date()`"
 categories:
   - open science
   - evidence synthesis

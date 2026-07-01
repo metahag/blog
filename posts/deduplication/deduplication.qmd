@@ -1,0 +1,128 @@
+---
+title: "Automated deduplication of references"
+description: "Free and open source tools for simple deduplication of references"
+author: "Lucija Batinović"
+date: "`r Sys.Date()`"
+categories:
+  - open science
+  - evidence synthesis
+format:
+  html:
+    grid:
+      body-width: 1000px
+    embed-resources: true
+    self-contained-math: true 
+    code-overflow: scroll
+    toc: true
+editor: source
+execute: 
+  echo: TRUE
+  message: FALSE
+  warning: FALSE
+  error: FALSE
+  output: TRUE
+  eval: FALSE
+---
+
+Systematic searches routinely retrieve an increasing number of references each year and manual deduplication is essentially impossible when that number is in tens of thousands. Although there are excellent paid automated deduplication tools (e.g., Covidence, EPPI-Reviewer, EndNote), open source alternatives differ in features and performance. This post compares several R- and web-based open source alternatives I've tried in my projects. All tools were tested using the same search datasets (app. 35,000 references) on the same computer, and runtime presented is a rough comparison, not formal benchmark testing.
+
+## Tools
+
+| Tool                   | Open source | Web / Desktop       | Export                                           | Matching       | Manual review interface | Reproducible | Scalability  | Robust to poor metadata | Metadata enrichment |
+|------------------------|:-----------:|---------------------|--------------------------------------------------|:--------------:|:-----------------------:|:------------:|:-------------:|:-----------------------:|:-------------------:|
+| ASySD Shiny            | Yes         | Web                 | RIS, CSV, Endnote tab delimited                  | Automatic      | Yes                     | No           | >35k refs     | Yes                     | Yes                 |
+| ASySD R                | Yes         | Desktop             | RIS, CSV, Endnote tab delimited                  | Automatic      | No                      | Yes          | Depends on RAM| Yes                     | NA                  |
+| Zotero / Zoplicate     | Yes         | Desktop             | All export options common in reference managers  | Automatic      | Yes                     | No           | >35k refs     | Yes                     | No                  |
+| TeraTools Deduplicator | Yes         | Web                 | All export options common in reference managers  | Focused/Relaxed| Yes                     | No           | >35k refs     | Yes                     | No                  |
+| Revtools               | Yes         | Desktop             | RIS, BIB, CSV                                    | DOI/Fuzzy      | No                      | Yes          | Depends on RAM| No                      | No                  |
+| Synthesisr             | Yes         | Desktop             | RIS, BIB, CSV                                    | DOI/Fuzzy      | No                      | Yes          | Depends on RAM| No                      | No                  |
+
+
+# Click-and-point tools
+
+## Zotero and Zoplicate
+The simplest workflow is using Zotero, as it is an excellent reference manager that is open source and free. Zotero already checks for duplicates, but you have to remove them manually. However, together with a plugin called [Zoplicate](https://github.com/ChenglongMa/zoplicate), you can automatically deduplicate all references without manual input. Zoplicate has excellent setup options and allows you to choose a master item (the reference that will be kept while all other duplicates are removed), based on the completeness of the reference, or date of upload. The only downside to Zoplicate is that it cannot automatically match files that are incorrectly labeled as a different publication type (e.g., a conference paper categorized as a peer-reviewed journal article), so you have to manually correct them before deduplicating those articles. Depending on the number of articles you have to deduplicate, this process can take several minutes, up to thirty minutes, which is still manageable. 
+
+## ASySD Shiny App
+*ASySD* is an R package that also has a click-and-point [version](https://camarades.shinyapps.io/ASySD/). Compared to Zoplicate, it is faster, and has great labeling options (so you can choose to keep unique records from specific sources). It supports multiple types of reference files, but recommends importing EndNote XML files whenever possible, which is compatible with most reference managers. It also provides multiple export options, but the RIS format worked better in my experience. Both EndNote XML and RIS are compatible with Zotero, so although it requires exporting and importing from/to Zotero, the entire workflow is smooth. ASySD is decently fast in automatically deduplicating references (35k articles were processed in ~1 min). Unlike Zotero/Zoplicate, it has a simpler interface for duplicates that you have to flag manually; you only need to select rows you categorize as duplicates and bulk deduplicate, without changing individual publication types before merging. 
+
+## Tera Tools Deduplicator
+[Tera-tools deduplicator](https://tera-tools.com/deduplicator) is part of a larger open source software for systematic reviews, previously named Systematic Review Accelerator. It accepts imports from most common reference files from reference managers, and provides multiple export options (e.g., XML, nbib, .txt). Deduplication works based on machine learning, with two settings for the algorithm -- focused and relaxed. This was the fastest tool I used, processing 35k+ citations in seconds. The output does not provide automatically deduplicated references, but instead categorizes duplicates/articles in four categories based on the confidence level, and you have to approve the decisions before it merges duplicates. This provides higher level of control over deduplication, while still being able to accept decisions in bulk without manually approving each reference if that's desired. Differently from AsySD, it does not have labeling options and selective exporting options, and the interface is less intuitive.
+
+# R packages
+
+## revtools
+*revtools* is an R package that allows easy deduplication of .ris or .bib files. The package has functions for importing, exporting and deduplicating references. Unlike Zoplicate and ASySD Shiny app, however, it is worse for parsing potentially corrupt files which Zotero still can read properly. This can be an issue for references from SCOPUS, or gray literature databases, as they seem to have corrupt files, improperly encoded or otherwise causing parsing issues. I have tested all mentioned tools with the same reference files, and both revtools and synthesisr had issues with reading the files due to issues that Zotero and ASySD had no issues parsing. When I import the files with RefManageR, some files are imported, which implies that R packages cannot handle improper metadata as well as reference managers.  
+
+```{r}
+library(revtools)
+
+# Import
+refs1 <- read_bibliography("file1.bib") 
+refs2 <- read_bibliography("file2.bib") 
+refs <- c(refs1, refs2)
+
+# --------------------------------------------------
+# DOI deduplication
+# --------------------------------------------------
+
+doi_matches <- find_duplicates(refs, match_variable = "doi", method = "exact")
+doi_unique <- extract_unique_references(refs, doi_matches)
+write_bibliography(doi_unique, "revtools_doi_unique.ris")
+
+# also export as CSV
+# write.csv(title_unique, "revtools_title_unique.csv", row.names = FALSE)
+```
+
+
+## synthesisr
+*synthesisr* is slightly more robust to poor metadata than *revtools*. Otherwise, the functionality of these two packages are highly similar, with equal import and export options. Both *revtools* and *synthesisr* are limited when it comes to matching on multiple metadata points, and they usually identify fewer duplicates, with multiple steps needed to consolidate the duplicates, which also makes it complicated to manually resolve afterwards. However, the entire process is reproducible, and there is higher control over identified duplicates than in Zotero and ASySD Shiny app.
+
+```{r}
+library(synthesisr)
+
+# Import
+refs1 <- read_refs("file1.bib", return_df = TRUE)
+refs2 <- read_refs("file2.bib", return_df = TRUE)
+refs <- rbind(refs1, refs2)
+
+# --------------------------------------------------
+# Title fuzzy deduplication
+# --------------------------------------------------
+
+title_unique <- deduplicate(refs, "title", method = "string_osa", rm_punctuation = TRUE, to_lower = TRUE)
+
+write_refs(title_unique, "synthesisr_title_unique.bib")
+
+# also export as CSV
+# write.csv(title_unique, "synthesisr_title_unique.csv", row.names = FALSE)
+
+```
+
+
+## ASySD
+
+*ASySD* is an R package that forms the basis of the Shiny app mentioned earlier. Although the R package uses *bibliometrix* and *RefManageR* for importing, I found that the Shiny application correctly parsed slightly more records from problematic files. ASySD processes the 35k references in around a minute and a half locally, and has the same options as the accompanying Shiny App. For simplicity, the app works much better, but the R package provides a reproducible workflow and easier updating. 
+
+```{r}
+library(ASySD)
+
+# Import
+file1 <- load_search("file1.bib")
+file2 <- load_search("file2.bib")
+refs <- dplyr::bind_rows(file1, file2)
+# Deduplicate
+dedup_citations <- dedup_citations(refs)
+unique_citations <- dedup_citations$unique 
+
+# Total runtime: 99.49 seconds
+
+```
+
+# TL;DR
+
+- **Zotero + Zoplicate** is the easiest option, and the best for a quick deduplication of a smaller dataset.
+- **ASySD Shiny** is faster than Zoplicate for larger/complex datasets, and a better option for updating reviews because of labeling options.
+- **Tera Tools Deduplicator** is the fastest option and gives the best manual control over uncertain matches.
+- **ASySD R** is the most robust choice for a reproducible workflow.
+- **revtools** and **synthesisr** provide control and reproducibility for smaller datasets from higher quality databases, but are less robust to malformed metadata.
