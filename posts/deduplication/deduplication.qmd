@@ -2,7 +2,7 @@
 title: "Automated deduplication of references"
 description: "Free and open source tools for simple deduplication of references"
 author: "Lucija Batinović"
-date: "`r Sys.Date()`"
+date: "2026-07-01"
 categories:
   - open science
   - evidence synthesis
